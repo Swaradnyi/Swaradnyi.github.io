@@ -20,7 +20,7 @@ export default function UserInfo({ setEmailForApp, setUserNameForApp }) {
 
   return (
     <div className="login-wrapper">
-      <h3>Enter fields to continue</h3>
+      <h3 className="title">Enter fields to continue</h3>
       <form onSubmit={handleSubmit}>
         <label>User Name</label>
         <input
