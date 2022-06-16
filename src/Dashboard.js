@@ -4,6 +4,7 @@ import Keyboard from "./components/Keyboard";
 import { boardDefault, generateWordSet } from "./Words";
 import React, { useState, createContext, useEffect } from "react";
 import GameOver from "./components/GameOver";
+// import ParticleBackground from "./components/Particles";
 
 export const AppContext = createContext();
 
@@ -88,6 +89,7 @@ function Dashboard({ email, userName }) {
         }}
       >
         <div className="game">
+          {/* <ParticleBackground /> */}
           <div>Welcome {userName} to Guessing Game!</div>
           <Board />
           {gameOver.gameOver ? <GameOver /> : <Keyboard />}
