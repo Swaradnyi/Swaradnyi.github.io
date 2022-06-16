@@ -6,21 +6,21 @@ export default function UserInfo({ setEmailForApp, setUserNameForApp }) {
   const [email, setEmail] = useState("");
   const [userName, setUserName] = useState("");
   let navigate = useNavigate();
-  function validateForm() {
-    return email.length > 0 && userName.length > 0;
-  }
 
   function handleSubmit(event) {
     event.preventDefault();
-    if (validateForm) {
+    if (email.length > 0 && userName.length > 0) {
       setEmailForApp(email);
       setUserNameForApp(userName);
       navigate("/dashboard");
+    } else {
+      alert("Please enter the fields to continue");
     }
   }
 
   return (
     <div className="login-wrapper">
+      <h3>Enter fields to continue</h3>
       <form onSubmit={handleSubmit}>
         <label>User Name</label>
         <input
@@ -35,9 +35,7 @@ export default function UserInfo({ setEmailForApp, setUserNameForApp }) {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <button disabled={!validateForm()} onClick={handleSubmit}>
-          Submit
-        </button>
+        <button onClick={handleSubmit}>Submit</button>
       </form>
     </div>
   );
