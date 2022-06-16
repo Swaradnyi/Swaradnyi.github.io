@@ -1,7 +1,7 @@
 {
   "name": "word-guessing-game",
   "version": "0.1.0",
-  "homepage": "https://swaradnyi.github.io/word-guessing-game",
+  "homepage": "https://swaradnyi.github.io",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
